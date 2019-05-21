@@ -32,8 +32,9 @@ sudo vim /etc/ld.so.conf.d/cuda.conf
 ```console
 sudo ldconfig
 ```
-
 ### Or __Optionaly__ add the following commands to your .bashrc
+```console
 export PATH=$PATH:/usr/local/cuda-10.0/bin
 export CUDADIR=/usr/local/cuda-10.0
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-10.0/lib64
+```
