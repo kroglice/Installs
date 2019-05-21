@@ -7,12 +7,22 @@ sudo apt purge nvidia*
 ```
 ### Add the Nvidia graphic card PPA
 ```console
-sudo add-apt-repository ppa:graphics-drivers
+sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
+```
+### Identify your graphic card model and recommended driver
+```console
+ubuntu-drivers devices
 ```
 ### Install the Nvidia GPU driver
 ```console
-sudo apt-get install nvidia-[VERSION-NUMBER]
+sudo ubuntu-drivers autoinstall
+sudo reboot
+nvidia-smi
+```
+or
+```console
+sudo apt install nvidia-[VERSION-NUMBER]
 sudo reboot
 nvidia-smi
 ```
